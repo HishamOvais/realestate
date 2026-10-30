@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.js">
+</head>
+<body>
+    
+    <header class="header">
+        <a href="#home" class="logo">KAKA <span>REAL ESTATE.</span></a>
+        <button class="menu-btn" onclick="toggleMenu()">☰</button>
+        <nav id="nav">
+            <a href="#home">Home</a>
+            <a href="#properties">Properties</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+            <a href="#contact" class="nav-btn">Get In Touch</a>
+        </nav>
+    </header>
+    
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <small>WELCOME TO KAKA REAL ESTATE</small>
+            <h1>Find Your <span>Dream</span> Home.</h1>
+            <p>Discover exceptional properties, premium locations and extraordinary investment opportunities. Your dream property starts with us.</p>
+            <a href="#properties" class="btn">EXPLORE PROPERTIES →</a>
+            <a href="#contact" class="btn outline">CONTACT US</a>
+        </div>
+    </section>
+    
+    <div class="search-wrap">
+        <div class="search-box">
+            <div>
+                <label>PROPERTY TYPE</label>
+                <select id="type">
+                    <option value="all">All Properties</option>
+                    <option value="house">Houses</option>
+                    <option value="apartment">Apartments</option>
+                    <option value="commercial">Commercial</option>
+                </select>
+            </div>
+            <div>
+                <label>LOCATION</label>
+                <select id="location">
+                    <option value="all">All Locations</option>
+                    <option value="dha">DHA</option>
+                    <option value="bahria">Bahria Town</option>
+                    <option value="gulshan">Gulshan</option>
+                </select>
+            </div>
+            <div>
+                <label>PURPOSE</label>
+                <select id="purpose">
+                    <option value="all">Buy / Rent</option>
+                    <option value="sale">For Sale</option>
+                    <option value="rent">For Rent</option>
+                </select>
+            </div>
+            <div>
+                <label>BUDGET</label>
+                <select id="budget">
+                    <option value="all">Any Budget</option>
+                    <option value="10000000">Under 1 Crore</option>
+                    <option value="30000000">Under 3 Crore</option>
+                    <option value="50000000">Under 5 Crore</option>
+                </select>
+            </div>
+            <button onclick="searchProperties()">SEARCH</button>
+        </div>
+    </div>
+    
+    <section class="properties" id="properties">
+        <div class="section-head reveal">
+            <small>OUR PORTFOLIO</small>
+            <h2>Featured Properties</h2>
+            <p>Explore our exclusive collection of properties.</p>
+        </div>
+        
+        <div class="property-grid">
+            
+            <div class="property-card reveal" data-type="house" data-location="dha" data-purpose="sale" data-price="25000000">
+                <div class="property-img">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=85" alt="Luxury house">
+                    <span class="tag">FOR SALE</span>
+                </div>
+                <div class="property-info">
+                    <h3>Luxury Family House</h3>
+                    <p class="location">📍 DHA, Karachi</p>
+                    <h3 class="price">PKR 2.5 Crore</h3>
+                    <div class="features"><span>🛏 4 Beds</span><span>🚿 4 Baths</span><span>🏠 10 Marla</span></div>
+                    <a href="#contact" class="details">VIEW PROPERTY →</a>
+                </div>
+            </div>
+            
+            <div class="property-card reveal" data-type="apartment" data-location="bahria" data-purpose="sale" data-price="15000000">
+                <div class="property-img">
+                    <img src="https://images.unsplash.com/photo-1600607687644-c7171b42498f?auto=format&fit=crop&w=900&q=85" alt="Modern apartment">
+                    <span class="tag">FOR SALE</span>
+                </div>
+                <div class="property-info">
+                    <h3>Modern Luxury Apartment</h3>
+                    <p class="location">📍 Bahria Town</p>
+                    <h3 class="price">PKR 1.5 Crore</h3>
+                    <div class="features"><span>🛏 3 Beds</span><span>🚿 2 Baths</span><span>🏠 1800 Sqft</span></div>
+                    <a href="#contact" class="details">VIEW PROPERTY →</a>
+                </div>
+            </div>
+            
+            <div class="property-card reveal" data-type="house" data-location="gulshan" data-purpose="rent" data-price="5000000">
+                <div class="property-img">
+                    <img src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?auto=format&fit=crop&w=900&q=85" alt="Contemporary villa">
+                    <span class="tag">FOR RENT</span>
+                </div>
+                <div class="property-info">
+                    <h3>Contemporary Villa</h3>
+                    <p class="location">📍 Gulshan, Karachi</p>
+                    <h3 class="price">PKR 150,000 / Month</h3>
+                    <div class="features"><span>🛏 5 Beds</span><span>🚿 4 Baths</span><span>🏠 1 Kanal</span></div>
+                    <a href="#contact" class="details">VIEW PROPERTY →</a>
+                </div>
+            </div>
+            
+        </div>
+        <p id="noResults">No matching properties found.</p>
+    </section>
+    
+    <section class="about" id="about">
+        <div class="about-img reveal">
+            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1000&q=85" alt="Luxury property">
+            <div class="experience"><strong>100%</strong>CLIENT FOCUSED</div>
+        </div>
+        <div class="about-text reveal">
+            <small>ABOUT OUR COMPANY</small>
+            <h2>Building Dreams, Creating Opportunities.</h2>
+            <p>Welcome to KAKA REAL ESTATE, your trusted destination for buying, selling and renting premium properties. We help you find the perfect place for your future.</p>
+            <p>✦ Professional Property Consultation</p>
+    <p>✦ Residential & Commercial Properties</p>
+    <p>✦ Investment Opportunities</p>
+    <p>✦ Trusted Client Relationships</p>
+    <a href="#contact" class="btn">KNOW MORE →</a>
+</div>
+</section>
+
+<section class="services" id="services">
+    <div class="section-head reveal">
+        <small>WHAT WE DO</small>
+        <h2>Our Premium Services</h2>
+        <p>Everything you need for your real estate journey.</p>
+    </div>
+    <div class="service-grid">
+        <div class="service-card reveal"><div>🏡</div><h3>Buy Properties</h3><p>Find your ideal home with our professional assistance.</p></div>
+        <div class="service-card reveal"><div>🔑</div><h3>Sell Properties</h3><p>Connect with potential buyers and sell your property.</p></div>
+        <div class="service-card reveal"><div>📈</div><h3>Investment Advisory</h3><p>Explore promising real estate investment opportunities.</p></div>
+    <div class="service-card reveal"><div>🏢</div><h3>Commercial Property</h3><p>Discover offices, shops and commercial spaces.</p></div>
+    <div class="service-card reveal"><div>🏘️</div><h3>Rental Solutions</h3><p>Find suitable residential and commercial rentals.</p></div>
+    <div class="service-card reveal"><div>🤝</div><h3>Consultation</h3><p>Get professional guidance for your property decisions.</p></div>
+</div>
+</section>
+
+<section class="stats">
+    <div><h2>100+</h2><p>HAPPY CLIENTS</p></div>
+    <div><h2>50+</h2><p>PROPERTIES</p></div>
+    <div><h2>10+</h2><p>LOCATIONS</p></div>
+    <div><h2>24/7</h2><p>SUPPORT</p></div>
+</section>
+
+<section class="cta">
+    <div class="reveal">
+        <small>YOUR DREAM PROPERTY AWAITS</small>
+        <h2>Let's Find Your Perfect Property.</h2>
+        <p>Contact KAKA REAL ESTATE today.</p>
+        <a href="#contact" class="btn">CONTACT OUR TEAM →</a>
+    </div>
+</section>
+
+<section id="contact">
+  <div class="section-head reveal">
+      <small>GET IN TOUCH</small>
+      <h2>Let's Talk About Your Property</h2>
+      <p>We would love to hear from you.</p>
+    </div>
+    <div class="contact-grid">
+        <div class="contact-info reveal">
+            <h3>Contact KAKA REAL ESTATE</h3>
+            <p>Whether you want to buy, sell, rent or invest, our team is ready to assist you.</p>
+            <p>📍 Karachi, Pakistan</p>
+            <p>📞 +92 XXX XXXXXXX</p>
+            <p>✉ info@kakarealestate.com</p>
+            <p>🕒 Monday - Saturday</p>
+        </div>
+        <form class="contact-form reveal" onsubmit="sendMessage(event)">
+            <input id="name" type="text" placeholder="Your Full Name" required>
+            <input id="phone" type="tel" placeholder="Your Phone Number" required>
+            <input id="email" type="email" placeholder="Your Email Address">
+            <textarea id="message" placeholder="Your Property Requirements..." required></textarea>
+            <button type="submit">SEND WHATSAPP INQUIRY →</button>
+        </form>
+    </div>
+</section>
+
+<footer>
+    <div class="footer-top">
+        <div><h3>KAKA <span>REAL ESTATE.</span></h3><p>Your trusted real estate partner. Discover exceptional properties and investment opportunities.</p></div>
+        <div><h3>QUICK LINKS</h3><a href="#home">Home</a><a href="#properties">Properties</a><a href="#about">About</a><a href="#contact">Contact</a></div>
+        <div><h3>OUR SERVICES</h3><a href="#services">Buy Property</a><a href="#services">Sell Property</a><a href="#services">Rent Property</a><a href="#services">Investment</a></div>
+    </div>
+    <div class="copyright">© 2026 KAKA REAL ESTATE. All Rights Reserved.</div>
+</footer>
+
+<a class="whatsapp" href="https://wa.me/923001234567" target="_blank">◉</a>
+
+</body>
+</html>
